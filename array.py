@@ -4,7 +4,7 @@ import random
 class Array:
     '''
     Define an array an its methods. All the "Dunder score items" are magical methods, then you can cast them as 
-    Python built-in methods as: str(), getitem()
+    Python built-in methods as: str(), getitem(), len()
     '''
     def __init__(self, capacity, fill_value = None):
         self.items = list ()
