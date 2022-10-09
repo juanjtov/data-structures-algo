@@ -9,7 +9,7 @@ class Array:
     def __init__(self, capacity, fill_value = None):
         self.items = list ()
         self.capacity = capacity
-        for i in range(self.capacity):
+        for _ in range(self.capacity):
             self.items.append(fill_value)
 
     #Array Length, is just for query that's why it's private
@@ -21,24 +21,27 @@ class Array:
         return str(self.items)
 
     #Generate an interator to go through the elements of the array
-    '''
-    Remember that an iterable can become an iterator with the iter() method
-    '''
+    
     def __iter__(self):
+        '''
+        Remember that an iterable can become an iterator with the iter() method
+        '''
         return iter(self.items)
 
     #Get one item of the array
-    '''
-    Search items in an Array has complexity O(c)
-    '''
+
     def __getitem__(self, index):
+        '''
+        Search items in an Array has complexity O(c)
+        '''
         return self.items[index]
     
-    '''
-    Insert elements in an Array has complexity O(c)
-    '''
+    
     #Inster element in an Array
     def __setitem__(self, index, new_item):
+        '''
+        Insert elements in an Array has complexity O(c)
+        '''
         self.items[index] = new_item
 
     def __replacingitems__(self):
@@ -50,21 +53,20 @@ class Array:
         return [self.__setitem__(i, random.randint(0,500)) for i in range(self.capacity)]
 
 
-
     #####################Regular Methods
-    '''
-    Using the convencional way
-    '''
+    
+    #Using the convencional way
+    
     def replaceitems(self):
         for i in range(len(self.items)):
             self.items[i] = random.random()
 
     def sum_values(self):
-        sum = 0
+        sum_v = 0
         for i in range(len(self.items)):
-            sum = sum + self.items[i]
+            sum_v = sum_v + self.items[i]
         
-        return sum
+        return sum_v
             
     
 
@@ -75,8 +77,8 @@ if __name__=='__main__':
     print(menu)
     print(f'The lenght of the array is: {menu.__len__()}')
     #fill the elements
-    for i in range(menu.__len__()):
-        menu[i] = i+5
+    # for i in range(menu.__len__()):
+    #     menu[i] = i+5
 
     print(menu)
     #Query the items of the array
@@ -98,7 +100,7 @@ if __name__=='__main__':
 
     print(f'Adding all the values of the array using sum_values(): {menu.sum_values()}')
 
-    print(f'Replacing items using magical methods and randint:\n')
+    print('Replacing items using magical methods and randint:\n')
     menu.__replacingitems__()
     #####When I print the method being executed the result is [None,None, etc.]
     #print(menu.__replacingitems__())
