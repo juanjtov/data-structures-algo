@@ -1,6 +1,7 @@
 #Very basic guide for Begginers
 '''Dynamic Sets Basic Operations'''
 
+#Appending items to a list
 fruits = []
 
 #Adding elementds to de list
