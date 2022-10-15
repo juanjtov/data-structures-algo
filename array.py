@@ -45,6 +45,7 @@ class Array:
         self.items[index] = new_item
 
     def __replacingitems__(self):
+        
         #Standard For
         # for i in range(self.capacity):
         #     self.__setitem__(i, random.randint(0,500))
@@ -58,10 +59,16 @@ class Array:
     #Using the convencional way
     
     def replaceitems(self):
+        '''
+        Filling the array with random numbers
+        '''
         for i in range(len(self.items)):
             self.items[i] = random.random()
 
     def sum_values(self):
+        '''
+        Add all the values of the array
+        '''
         sum_v = 0
         for i in range(len(self.items)):
             sum_v = sum_v + self.items[i]
