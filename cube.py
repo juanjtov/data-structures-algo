@@ -144,7 +144,7 @@ class Cube:
     '''
     Class to represent a 3D array
     '''
-    def __init__(self, rows, cols, dims, fill_value = 10):
+    def __init__(self, rows, cols, dims, fill_value = None):
         self.info = Grid(rows, cols)
         print(self.info)
         for row in range(rows):
@@ -153,6 +153,9 @@ class Cube:
 
     def __getitem__(self, index):
         return self.info[index]
+
+    def __str__(self):
+        return str(self.info)
 
 
 if __name__=='__main__':
@@ -163,4 +166,5 @@ if __name__=='__main__':
     td_matrix = Cube(rows, cols, steps)
 
     print(f'Welcome to the TENSOR: {td_matrix}')
+    #print(td_matrix)
     print(td_matrix[0][1][3])
