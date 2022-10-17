@@ -2,7 +2,7 @@
 
 This repository was created to study and provide practical examples of how to implement data structures and algorithms in Python.
 
-##Arrays
+## Arrays
 
 In the following examples you can see how to implement an array and its methods. 
 
