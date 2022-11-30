@@ -79,28 +79,27 @@ class Array:
 
 if __name__=='__main__':
     arr_capacity = int(input('Insert the array capacity: '))
+    #Create an array, all its elements are going to be None
     menu = Array(arr_capacity)
-    len(menu)
-    print(menu)
-    print(f'The lenght of the array is: {menu.__len__()}')
-    #fill the elements
-    # for i in range(menu.__len__()):
-    #     menu[i] = i+5
 
-    print(menu)
+    #Print the lenght of the array 
+    print(f'The lenght of the array is: {menu.__len__()}')
+    
+
+    print(f'Printing the None array: {menu}')
     #Query the items of the array
     for option in menu:
         print(option)
 
-    print(str(menu))
+    #Print the array as a string
     print(f'Array being called directly using the .__str__  method: {menu.__str__()}, {type(menu.__str__())}')
-    print(type('Hi sweetie'))
+    
 
     print(f'Using __getitem__(3): {menu.__getitem__(3)}')
 
     #Setting a new item in the position of the index 1, new item is 100: 
     menu.__setitem__(1,100)
-    print(menu)
+    print(f'Printitng the new array having changed the a value with __setitem__: {menu}')
 
     menu.replaceitems()
     print(f'Menu when the items have been replaced: {menu}')
@@ -113,5 +112,5 @@ if __name__=='__main__':
     #print(menu.__replacingitems__())
 
     #These two prints are the same
-    print(menu.__str__())
-    print(menu)
+    #print(menu.__str__())
+    print(f'Array with items replaced using randint: {menu}')
