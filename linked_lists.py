@@ -74,6 +74,12 @@ class SinglyLinkedList:
                 print(f'Data {data} found!')
 
 
+    def clear(self):
+        self.head = None
+        self.tail = None
+        self.size = 0
+
+
 if __name__=='__main__':
 
     LL = SinglyLinkedList()
@@ -84,11 +90,13 @@ if __name__=='__main__':
     LL.push(8)
     #print(LL.head.next.data)
     
-    
-    my_iter = LL.iter()
-    print(next(my_iter))
-    print(next(my_iter))
-    print(next(my_iter))
+    for node in LL.iter():
+        print(node)
+
+    # my_iter = LL.iter()
+    # print(next(my_iter))
+    # print(next(my_iter))
+    # print(next(my_iter))
 
     print(f'Size of the LL: {LL.size()}')
     
