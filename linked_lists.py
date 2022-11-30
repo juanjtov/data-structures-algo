@@ -7,6 +7,9 @@ class SinglyLinkedList:
         self.llsize = 0
 
     def push(self, data):
+        '''
+        This method push the elements at the end of the list O(n)
+        '''
         node = Node(data)
 
         #Check if your LL has Nodes already if not  it starts assigning a head
@@ -22,6 +25,15 @@ class SinglyLinkedList:
             current.next = node
         
         self.llsize += 1
+
+    def insert(self, data):
+        '''
+        Insert an element at the beggining of the lists O(1)
+        '''
+        x = Node(data, self.head)
+
+        self.head = x
+
 
     def size(self):
         return str(self.llsize)
@@ -129,5 +141,11 @@ if __name__=='__main__':
     #Replace an item in the LL
     LL.replace_items(15,"Z")
     #Print the new LL
+    for node in LL.iter():
+        print(node)
+
+    print('\n')
+    LL.insert(98)
+
     for node in LL.iter():
         print(node)
