@@ -60,18 +60,42 @@ class SinglyLinkedList:
             current = current.next
 
     
-    def search(self,data):
-        '''YOu can either return  the node when you find it or just print a message that 
+    def search(self,target):
+        '''You can either return  the node when you find it or just print a message that 
         it exists.
         '''
-        # x = self.head
-        # while x!=None and x.data != data:
-        #     x = x.next
+        x = self.head
+        while x!=None and x.data != target:
+            x = x.next
+
+        if x != None:
+            print(f'Target item {target} has been found')
+
+        else:
+            print(f'Target item {target} is not in the Linked List')
 
         # return x
-        for node in self.iter():
-            if data == node:
-                print(f'Data {data} found!')
+
+        #Another Way
+        # for node in self.iter():
+        #     if target == node:
+        #         print(f'Data {target} found!')
+
+
+    def replace_items(self, target, data):
+        '''
+        Replace and item (target) of the LL with another value (data)
+        '''
+        x = self.head
+        while x != None and x.data != target:
+            x = x.next
+
+        if x== None:
+            print(f'The item {target} doesn not exist in the LL')
+
+        else:
+            x.data = data
+            print(f'The item {target} has been replaced by {data}')
 
 
     def clear(self):
@@ -100,8 +124,10 @@ if __name__=='__main__':
 
     print(f'Size of the LL: {LL.size()}')
     
-    LL.search(8)
+    LL.search(5)
     
-
-
-                
+    #Replace an item in the LL
+    LL.replace_items(15,"Z")
+    #Print the new LL
+    for node in LL.iter():
+        print(node)

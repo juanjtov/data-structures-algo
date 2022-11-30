@@ -1,10 +1,10 @@
 
 class Node:
 
-    def __init__(self, data, prev=None, next=None) -> None:
+    def __init__(self, data,  next=None) -> None:
         self.data = data
         self.next = next
-        self.prev = prev
+        #self.prev = prev
         
 
 
